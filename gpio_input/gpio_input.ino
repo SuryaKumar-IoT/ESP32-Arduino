@@ -1,11 +1,20 @@
+int switch1=23;
+int switch2=22;
 void setup() 
 {
-  pinMode(23,INPUT);
+  pinMode(switch1,INPUT);
+  pinMode(switch2,INPUT);
   Serial.begin(9600);
 }
 
 void loop() 
 {
-  Serial.println(digitalRead(23));
-  delay(1000);
+  if(digitalRead(switch1)==0)
+  {
+    Serial.println("Button 1");
+  }
+  else if(digitalRead(switch2)==0)
+  {
+    Serial.println("Button 1");
+  }
 }
